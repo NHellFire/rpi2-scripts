@@ -1,0 +1,18 @@
+#!/bin/sh
+set -e
+REPO=/home/pi/rpi-firmware
+REPOURL=git://10.0.0.1/raspberrypi/firmware.git
+
+if [ ! -d "$REPO/.git" ]; then
+	git clone --depth=1 "$REPOURL" "$REPO"
+fi
+
+cd /home/pi/rpi-firmware
+
+git fetch --depth 1
+
+sudo cp boot/kernel7.img /boot/
+
+sudo rsync -aP --delete hardfp/opt/vc /opt
+
+sudo rsync -aP --delete modules/*-v7* /lib/modules/
