@@ -11,8 +11,8 @@ cd /home/pi/rpi-firmware
 
 git fetch --depth 1
 
-sudo cp boot/kernel7.img /boot/
+sudo rsync -rcP boot/ /boot/
 
-sudo rsync -aP --delete hardfp/opt/vc /opt
+sudo rsync -rcPpl --delete hardfp/opt/vc /opt
 
-sudo rsync -aP --delete modules/*-v7* /lib/modules/
+sudo rsync -rcPpl --delete modules/ /lib/modules/
