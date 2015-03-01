@@ -15,4 +15,4 @@ sudo rsync -rcP boot/ /boot/
 
 sudo rsync -rcPpl --delete hardfp/opt/vc /opt
 
-sudo rsync -rcPpl --delete modules/ /lib/modules/
+sudo rsync -rcPpl modules/ /lib/modules/
