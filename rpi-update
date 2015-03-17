@@ -10,6 +10,7 @@ fi
 cd /home/pi/rpi-firmware
 
 git fetch --depth 1
+git reset --hard origin/HEAD
 
 sudo rsync -rcP boot/ /boot/
 
