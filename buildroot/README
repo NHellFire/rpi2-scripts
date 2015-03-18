@@ -1,0 +1,2 @@
+Copy linux-3.18-rpi-2.defconfig into buildroot/board/raspberrypi/
+Copy raspberrypi_2_defconfig into buildroot/configs/
