@@ -4,5 +4,14 @@ export CXXFLAGS="$CFLAGS"
 export LD=/usr/bin/ld.gold
 export LDFLAGS="-L/opt/vc/lib -Wl,--as-needed"
 
+export FFMPEG_OPTS="--cpu=armv7ve"
+if [ ! -f configure ] || ! grep -qF 'FFMPEG_OPTS="${FFMPEG_OPTS} -r"' configure.in; then
+	echo "Renegerating configure..."
+
+	sed -i -e 's/FFMPEG_OPTS="-r"/FFMPEG_OPTS="${FFMPEG_OPTS} -r"/' configure.in
+	./bootstrap
+fi
+
+
 ./configure --prefix=/opt/xbmc-bcm --enable-gles --disable-sdl --disable-x11 --disable-xrandr --disable-openmax --disable-optical-drive --disable-dvdcss --disable-joystick --disable-debug --disable-crystalhd --disable-vtbdecoder --disable-vaapi --disable-vdpau --disable-pulse --disable-projectm --with-platform=raspberry-pi --enable-optimizations --enable-libcec --enable-player=omxplayer
 
