@@ -1,4 +1,4 @@
-export CFLAGS="-I/opt/vc/include -I/optvc/include/interface/vcos/pthreads/ -I/opt/vc/include/interface/vmcs_host/linux -fPIC -pipe -mcpu=cortex-a7 -mtune=cortex-a7 -march=armv7ve -mfpu=neon-vfpv4 -mfloat-abi=hard -mabi=aapcs-linux -O3"
+export CFLAGS="-I/opt/vc/include -I/opt/vc/include/interface/vcos/pthreads/ -I/opt/vc/include/interface/vmcs_host/linux -fPIC -pipe -mcpu=cortex-a7 -mtune=cortex-a7 -march=armv7ve -mfpu=neon-vfpv4 -mfloat-abi=hard -mabi=aapcs-linux -O3"
 export CXXFLAGS="$CFLAGS"
 
 export LDFLAGS="-L/opt/vc/lib -Wl,--as-needed"
