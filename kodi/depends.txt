@@ -15,7 +15,7 @@ libssl-dev
 libbz2-dev
 libtiff5-dev
 liblzo2-dev
-libyahl-dev
+libyajl-dev
 libtinyxml-dev
 libxml2-dev
 libxslt-dev
@@ -33,3 +33,10 @@ gperf
 libiso9660-dev
 libsdl1.2-dev
 libsdl-image1.2-dev
+gawk
+automake
+autoconf
+autotools-dev
+unzip
+zip
+libgif-dev
