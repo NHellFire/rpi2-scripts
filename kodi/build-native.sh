@@ -20,5 +20,5 @@ if [ ! -f configure ] || ! grep -qF 'FFMPEG_OPTS="${FFMPEG_OPTS} -r"' $FILE; the
 fi
 
 
-./configure --prefix=/opt/xbmc-bcm --enable-gles --disable-sdl --disable-x11 --disable-xrandr --disable-openmax --disable-optical-drive --disable-dvdcss --disable-joystick --disable-debug --disable-vtbdecoder --disable-vaapi --disable-vdpau --disable-pulse --disable-projectm --with-platform=raspberry-pi --enable-optimizations --enable-libcec --enable-player=omxplayer
+./configure --prefix=/opt/xbmc-bcm --enable-gles --disable-x11 --disable-openmax --disable-optical-drive --disable-dvdcss --disable-joystick --disable-debug --disable-vtbdecoder --disable-vaapi --disable-vdpau --disable-pulse --disable-projectm --with-platform=raspberry-pi --enable-optimizations --enable-libcec --enable-player=omxplayer
 
