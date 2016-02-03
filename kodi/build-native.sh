@@ -9,10 +9,13 @@ export CFLAGS="$CFLAGS -fuse-ld=gold"
 export CXXFLAGS="$CXXFLAGS -fuse-ld=gold"
 
 export FFMPEG_OPTS="--cpu=armv7ve"
-if [ ! -f configure ] || ! grep -qF 'FFMPEG_OPTS="${FFMPEG_OPTS} -r"' configure.in; then
+
+FILE=configure.in
+[ -f configure.ac ] && FILE=configure.ac
+if [ ! -f configure ] || ! grep -qF 'FFMPEG_OPTS="${FFMPEG_OPTS} -r"' $FILE; then
 	echo "Renegerating configure..."
 
-	sed -i -e 's/FFMPEG_OPTS="-r"/FFMPEG_OPTS="${FFMPEG_OPTS} -r"/' configure.in
+	sed -i -e 's/FFMPEG_OPTS="-r"/FFMPEG_OPTS="${FFMPEG_OPTS} -r"/' $FILE
 	./bootstrap
 fi
 
